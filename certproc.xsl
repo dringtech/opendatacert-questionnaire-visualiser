@@ -1,7 +1,5 @@
 <xsl:stylesheet version="1.0"
- xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
- xmlns:str="http://exslt.org/strings"
- exclude-result-prefixes="str">
+ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
  <xsl:output omit-xml-declaration="yes" indent="yes"/>
  <xsl:strip-space elements="*"/>
 
@@ -16,7 +14,6 @@
     <xsl:param name="level">0</xsl:param>
     <div>
     <pre>
-        <xsl:value-of select="str:padding($level, ' ')" />
         <xsl:value-of select="name()"/>
         <xsl:if test="@id">#<xsl:value-of select="@id"/></xsl:if>
         <xsl:value-of select="$newline"/>
